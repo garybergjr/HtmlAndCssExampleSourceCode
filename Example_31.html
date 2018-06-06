@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+
+<meta charset = "utf-8">
+<head>
+<title>Javascript Example 31</title>
+<script>
+
+
+function Rectangle(length,breadth,color) {
+  this.length = length;
+  this.breadth = breadth;
+  this.color = color;
+}
+
+
+function getPerimeter(rectangle) {
+  var perimeter = 2*(rectangle.length + rectangle.breadth);
+  // missing return statement
+  // return perimeter;
+}
+
+function undefinedExample() {
+  var rectangle1 = new Rectangle(5, 5,"Blue");
+  var unInitialisedVariable;
+  console.log("Try accessing a property that does not exist : " + rectangle1.perimeter);
+  
+  console.log("Now try using the return value from a function that does not return anythingt " + getPerimeter(rectangle1));
+  // throws UnreferencedError
+  //console.log("Now try calling a function that does not exist " + nonExistentFunction(rectangle1));  
+  // throws UnreferencedError
+  // console.log("Now try using a variable that does not exist " + nonExistentVariable);
+
+  // testing for undefined
+  if (unInitialisedVariable == undefined) {
+    console.log("Uninitialised variable alert!");
+  }
+
+  console.log("Type of undefined is ... wait for it.. " + (typeof unInitialisedVariable));
+
+
+}
+
+window.onload = undefinedExample;
+</script>
+</head>
+
+<body>
+<h1>'undefined'</h1>
+<p> <b>
+Javascript has a bunch of 'special values'. Of these, 'undefined' specifically refers to either a variable that exists but has yet to be initialized, or to a property that does not exist.
+</b></p>
+</body>
+
+
+</html>

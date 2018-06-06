@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+
+<meta charset = "utf-8">
+<head>
+<title>Javascript Example 34</title>
+<script id = "code">
+
+
+
+
+function stringNumberExample(descriptionOfVariable,someVariable) {
+  var someNumber = 123;
+  var someStringThatLooksLikeANumber = "123";
+   
+  if(someNumber == someStringThatLooksLikeANumber) {
+    console.log(someNumber + " is equal to " + someStringThatLooksLikeANumber); 
+  }
+
+  var someOtherNumber = 0;
+  var emptyString = "";
+   
+  if(someOtherNumber == emptyString) {
+    console.log(someOtherNumber + " is equal to <empty string>" + emptyString);
+  }
+  
+
+  console.log("'5' + 10 = "  + ('5' + 10));
+  console.log("5 * '10' = "  + (5*'10'));
+  console.log("'10' / '5' = "  + ('10'/'5'));
+  console.log("'10' - '5' = "  + ('10' - '5'));
+
+
+}
+
+window.onload = stringNumberExample;
+</script>
+</head>
+
+<body>
+<h1>strings and numbers</h1>
+<p> <b>
+When comparing numbers and strings, the string will be converted to a number before the conversion.
+When adding numbers and strings, the number will be converted to a string and a concatenated string returned.
+When subtracting, dividing or multiplying, the string will be converted to a number.
+</b></p>
+</body>
+
+
+</html>

@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+
+<meta charset = "utf-8">
+<head>
+<title>Javascript Example 20</title>
+<script>
+
+
+function Rectangle(l,b,c) {
+  this.length = l;
+  this.breadth = b;
+  this.color = c; 
+  this.area = function() {
+    return this.length * this.breadth;
+  }
+}
+
+function objectStuff() {
+  var rectangle = new Rectangle(3.3, 2.5,"Blue");
+  console.log("our rectangle has length = " + rectangle.length);
+  console.log("our rectangle has breadth = " + rectangle.breadth);
+  console.log("our rectangle has area = " + rectangle.area());
+
+}
+
+window.onload = objectStuff;
+</script>
+</head>
+
+<body>
+<h1>Object constructors can contain property functions too</h1>
+<p> <b>Again remember - anything you can do with a number or a string, you can also do with a function </b></p>
+</body>
+
+
+</html>

@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+
+<meta charset = "utf-8">
+<head>
+<title>Javascript Example 47</title>
+<script id = "code">
+
+
+
+function Bird() { 
+  this.sayHello = function() {
+    console.log("I am a bird, of type = " + this.name);
+  }
+  this.fly = function() {
+    return "I am flying!!";
+  }
+}
+
+
+function Country() { 
+  this.sayHello = function() {
+    console.log("I am a country, and my name is " + this.name);
+  }
+  this.getCurrency = function() {
+    console.log("My currency is the Lira");
+  }
+}
+
+function Turkey(){
+  this.name = "Turkey";
+}
+
+window.onload = function(){
+  // Turkey refers to the Bird
+  Turkey.prototype = new Bird();
+  // Create some Turkey objects 
+  // they will behave like birds
+  var turkey = new Turkey();
+  turkey.sayHello();
+  turkey.fly();
+  //turkey.getCurrency();
+
+
+  // Oops, I meant for Turkey to be the country, not the bird.
+  // Change the prototype
+  Turkey.prototype = new Country();
+  // Pre-existing turkeys continue to be birds
+  turkey.sayHello();
+  turkey.fly();
+  //turkey.getCurrency();
+
+  // but any new turkeys will now be countries.
+  var turkey1 = new Turkey();
+  turkey1.sayHello();
+  //turkey1.fly();
+  turkey1.getCurrency();
+
+ 
+
+};
+</script>
+</head>
+
+<body>
+<h1>Prototypes can be changed on the flye</h1>
+<p> 
+So - its possible to end up with 2 objects, created from the same object constructor, that behave very differently from each other! 
+</b></p>
+</body>
+
+
+</html>

@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+
+<meta charset = "utf-8">
+<head>
+<title>Javascript Example 29</title>
+<script>
+
+
+
+function modifyX(someNumber,someString) {
+  console.log("Values passed into function = " + someNumber + " and " + someString);
+  someNumber = someNumber + 10;
+  someString = "HumptyDumpty";
+  console.log("Values passed into function have been modified to = " + someNumber + " and " + someString);
+}
+
+
+function passByValueExample() {
+  var x = 10;
+  var y = "Vitthal";
+  console.log("Initial values (in calling function) = " + x + " " + y);
+  modifyX(x,y);
+  console.log("Final values (in calling function) = " + x + " " + y);
+
+}
+
+window.onload = passByValueExample;
+</script>
+</head>
+
+<body>
+<h1>Strings and numbers are passed by value to functions!!</h1>
+<p> <b>In other words, a copy is made before the function is called - and the function works with the copy - the original is not modified </b></p>
+</body>
+
+
+</html>

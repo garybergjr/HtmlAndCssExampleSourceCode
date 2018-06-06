@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+
+<meta charset = "utf-8">
+<head>
+<title>Javascript Example 54</title>
+<script id = "code">
+
+var noVotes = 0;
+
+window.onload = function(){
+  
+  var yesButton = document.getElementById("yesButton");
+  var noButton = document.getElementById("noButton");
+  var yesVotes = 0;
+
+  noButton.onclick = countNoVotes;
+
+  yesButton.onclick = function() {
+    yesVotes++;
+    var yesVotesMessage = document.getElementById("yesVotes");
+    yesVotesMessage.innerHTML = "# Yes votes = <b>" + yesVotes + "</b><br/>";
+
+  }
+
+  var hiFive = function() {
+    alert("Hi-five! #yes votes = " + yesVotes + "#no votes = " + noVotes);
+
+  }
+
+  yesButton.addEventListener("click",hiFive);  
+
+}
+
+function countNoVotes() {
+  noVotes++;
+  var noVotesMessage = document.getElementById("noVotes");
+  noVotesMessage.innerHTML = "# No votes = <b>" + noVotes + "</b><br/>";
+}
+
+</script>
+</head>
+
+<body>
+<h1>Multiple handlers listening on the same event</h1>
+<p> 
+Just use the addEventListener property of all HTML elements!
+
+
+</b></p>
+<button id = "yesButton"> Yes! </button>
+<button id = "noButton"> No! </button>
+
+<div id = "yesVotes"></div>
+<div id = "noVotes"></div>
+
+
+</body>
+
+
+</html>

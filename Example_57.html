@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+
+<meta charset = "utf-8">
+<head>
+<title>Javascript Example 57</title>
+<script>
+
+
+
+function objectStuff() {
+
+    var emptyObject = JSON.parse('{}');              
+    console.log(emptyObject);
+    var booleanVariable = JSON.parse('true');            
+    console.log(booleanVariable);
+    var stringVariable = JSON.parse('"Vitthal Srinivasan"');           
+    console.log(stringVariable);
+    var jsonArray = JSON.parse('[1, 5, "false"]'); 
+    console.log(jsonArray);
+    var jsonNull = JSON.parse('null');            
+    console.log(jsonNull);
+
+}
+
+window.onload = objectStuff;
+</script>
+</head>
+
+<body>
+<h1>Our first object!!</h1>
+<p> <b>Creating an object with 'JSON-like' syntax </b></p>
+</body>
+
+
+</html>

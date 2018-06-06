@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+
+<meta charset = "utf-8">
+<head>
+<title>Javascript Example 36</title>
+<script id = "code">
+
+
+
+function NaNExample() {
+
+  testIfIsTrue(0,0);
+  testIfIsTrue(-1,-1);
+  testIfIsTrue(5,5)
+  testIfIsTrue("null",null);
+  testIfIsTrue("undefined",undefined);
+  testIfIsTrue("Heloo","Hello");
+  testIfIsTrue("<empty string>","");
+  testIfIsTrue("<empty array>",[]);
+  testIfIsTrue("The string 'NaN'","NaN");
+  testIfIsTrue("The value NaN",NaN);
+  testIfIsTrue("The empty object {}",{});
+  testIfIsTrue("true",true);
+  testIfIsTrue("false",false);
+
+}
+
+function testIfIsTrue(descriptionOfVariable,someVariable) {
+  
+  if(someVariable) {
+    console.log(descriptionOfVariable + " is truthy");
+  }
+  else {
+    console.log(descriptionOfVariable + " is falsey");
+  }
+ //  console.log("What is the type of this variable? " + (typeof someVariable)); 
+}
+
+window.onload = NaNExample;
+</script>
+</head>
+
+<body>
+<h1>true or false?</h1>
+<p> <b>
+Javascript has strange rules for true and false - undefined, null, NaN, false, 0, the empty string and empty array are all false.
+</b></p>
+</body>
+
+
+</html>

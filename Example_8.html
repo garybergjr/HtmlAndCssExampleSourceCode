@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+
+<meta charset = "utf-8">
+<head>
+<title>Javascript Example 8</title>
+<script>
+
+window.onload = printX;
+var x = 5;
+function printX() {
+  console.log("Inside printX: x = " + x);
+  x = x+ 10;
+  printAnotherX(); 
+}
+
+function printAnotherX() {
+  console.log("Inside printAnotherX: x = " + x);
+}
+
+</script>
+</head>
+
+<body>
+<h1>Our eigth Javascript example</h1>
+<p> <b>Reloading a page re-initializes global variables</b> </p>
+<p> <b>Global</b> variables exist across all functions</p>
+<p> <b>Local</b> variables exist across all functions</p>
+</body>
+
+
+</html>

@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+
+<meta charset = "utf-8">
+<head>
+<title>Javascript Example 49</title>
+<script id = "code">
+
+
+
+function Bird() { 
+  this.sayHello = function() {
+    console.log("I am a bird, of type = " + this.name);
+  }
+  this.fly = function() {
+    console.log("I am flying!!");
+  }
+}
+
+function FlightlessBird() {
+ this.fly = function() {
+    console.log("I can't fly, even though I'm a bird :-(");
+  }
+}
+
+
+function Turkey(){
+  this.name = "Turkey";
+}
+
+window.onload = function(){
+
+  Turkey.prototype = new FlightlessBird();
+  FlightlessBird.prototype = new Bird();
+
+
+  var turkey1 = new Turkey();
+  console.log("Instantiate an object and call fly - the FlightlessBird version will be called");
+  turkey1.fly();
+  turkey1.fly = function() {
+    console.log("I am not quite flightless, I can fly a few meters in a pinch");
+  };
+  console.log("Now, override the fly method for this specific object, and call the fly property - the specific verison will be called");
+  turkey1.fly();
+
+  var turkey2 = new Turkey()
+  console.log("But if you call fly on any other objects, its still the FlightlessBird version that will be called");
+  turkey2.fly();
+
+  console.log("Now, override the fly method for the prototype object, so that all new Turkey objects will pick up this version");
+  Turkey.prototype.fly = function() {
+    console.log("I am not quite flightless, I can fly a few meters in a pinch");
+  };
+
+  var turkey3 = new Turkey();
+  console.log("Now instantiate another object and call fly - the specific version");
+  turkey3.fly();
+
+ 
+
+};
+</script>
+</head>
+
+<body>
+<h1>Overriding properties using prototypes</h1>
+<p> 
+There are 2 specific ways of overriding a property using prototypes - make sure you understand how they differ.
+</b></p>
+</body>
+
+
+</html>

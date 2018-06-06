@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+
+<meta charset = "utf-8">
+<head>
+<title>Javascript Example 25</title>
+<script>
+
+
+var rectangle = {
+  length : 5.0,
+  breadth : 3.5,
+  color : 'Red'
+};
+
+
+function Rectangle(length,breadth,color) {
+  this.length = length;
+  this.breadth = breadth;
+  this.color = color; 
+}
+
+function objectStuff() {
+  var rectangle2 = new Rectangle(3.3, 2.5,"Blue");
+  console.log("our rectangle has length = " + rectangle2.length);
+  console.log("our rectangle has breadth = " + rectangle2.breadth);
+  console.log("our rectangle has area = " + rectangle2.color);
+
+  console.log("our rectangle has length = " + rectangle.length);
+  console.log("our rectangle has breadth = " + rectangle.breadth);
+  console.log("our rectangle has area = " + rectangle.color);
+
+  console.log("Was rectangle2 instantiated with constructor Rectangle? " + (rectangle2 instanceof Rectangle));
+  console.log("Was rectangle instantiated with constructor Rectangle? " + (rectangle instanceof Rectangle));
+
+  for (var propertyName in rectangle2) {
+    delete rectangle2[propertyName];
+    console.log("Deleted " + propertyName + " from rectangle2..now accessing that property returns " + rectangle2[propertyName]);
+  }
+  console.log("Was rectangle2 instantiated with constructor Rectangle? " + (rectangle2 instanceof Rectangle));
+
+}
+
+window.onload = objectStuff;
+</script>
+</head>
+
+<body>
+<h1>Use instanceof to test if an object came from a particular constructor</h1>
+<p> <b>This make instanceof a lot more powerful than typeof </b></p>
+</body>
+
+
+</html>

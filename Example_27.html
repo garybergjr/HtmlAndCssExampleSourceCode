@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+
+<meta charset = "utf-8">
+<head>
+<title>Javascript Example 27</title>
+<script>
+
+
+function Rectangle(length,breadth,color) {
+  this.length = length;
+  this.breadth = breadth;
+  this.color = color;
+  this.getArea = function() {
+    return this.length * this.breadth;
+  } 
+}
+
+function compareTwoRectanglesByArea(rectangle1, rectangle2) {
+  var area1 = rectangle1.getArea();
+  var area2 = rectangle2.getArea();
+  console.log("Comparing 2 rectangles by area: " + area1 + " and " + area2);
+  return Math.sign(area1-area2);
+}
+
+function compareTwoRectanglesByLength(rectangle1, rectangle2) {
+   console.log("Comparing 2 rectangles by length: " + rectangle1.length + " and " + rectangle2.length);
+   return Math.sign(rectangle1.length-rectangle2.length);
+}
+
+function compareTwoRectangles(rectangle1,rectangle2, compareFunction) {
+   return compareFunction(rectangle1,rectangle2);
+}
+
+
+function objectStuff() {
+  var rectangle1 = new Rectangle(5, 5,"Blue");
+  var rectangle2 = new  Rectangle(10, 1,"Rede");
+  console.log("Comparing rectangles by length: " + compareTwoRectangles(rectangle1,rectangle2,compareTwoRectanglesByLength));
+  console.log("Comparing rectangles by area: " + compareTwoRectangles(rectangle1,rectangle2,compareTwoRectanglesByArea));
+
+}
+
+window.onload = objectStuff;
+</script>
+</head>
+
+<body>
+<h1>Passing functions to functions!!</h1>
+<p> <b>There is almost nothing to it - just create a variable holding a function, and pass that function into the other function! </b></p>
+</body>
+
+
+</html>

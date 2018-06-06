@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+
+<meta charset = "utf-8">
+<head>
+<title>Javascript Example 56</title>
+<script id = "code">
+
+var noVotes = 0;
+
+window.onload = function(){
+  
+  var closeButton = document.getElementById("closeButton");
+  var historyButton = document.getElementById("historyButton");
+  var googleButton = document.getElementById("googleButton");
+
+  var newWindow = null;
+
+  openButton.onclick = function() {
+   newWindow = window.open("http://www.nyt.com");
+  }
+
+  closeButton.onclick = function() {
+    if(newWindow != null){
+      newWindow.close();
+    }
+   window.close();
+  } 
+
+  historyButton.onclick = function() {
+    var historyTextDiv = document. getElementById("history");
+    historyTextDiv.innerHTML = "History includes: " + window.history.length + " but you can't see what the history includes";
+  }
+
+  googleButton.onclick = function() {
+    window.location = "http://www.google.com";
+  } 
+
+
+
+}
+
+
+</script>
+</head>
+
+<body>
+<h1>Interacting with the browser window</h1>
+<p> 
+The browser makes available a special object called 'window', that can be used to interact with the browser window from our javascript code
+
+
+</b></p>
+<button id = "openButton"> Open! </button>
+<button id = "closeButton"> Close! </button>
+<button id = "historyButton"> History! </button>
+<button id = "googleButton"> Google! </button>
+
+<div id = "history"></div>
+
+
+</body>
+
+
+</html>

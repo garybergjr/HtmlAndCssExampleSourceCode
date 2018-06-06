@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+
+<meta charset = "utf-8">
+<head>
+<title>Javascript Example 39</title>
+<script id = "code">
+
+
+
+function Rectangle(l,b,c) {
+  this.length = l;
+  this.breadth = b;
+  this.color = c;
+  this.area = function() {
+     return this.length * this.breadth;
+  };
+}
+
+
+window.onload = function(){
+  var rectangle1 = new Rectangle(3,4,'Red');
+  var rectangle2 = new Rectangle(4,5,'Orange');
+
+  console.log(rectangle1.area());
+  console.log(rectangle2.area())
+
+  var anonFunction = function() {
+    console.log("I am an anonymous function literal!");
+  }
+
+  var namedFunction = function foo(x) {
+    console.log("I am a named function!" + x);
+    if (x == 1) {
+     foo(2);
+    }
+  }
+
+  anonFunction();
+  namedFunction(1);
+  foo();
+ 
+};
+</script>
+</head>
+
+<body>
+<h1>Anonymous Functions</h1>
+<p> 
+Anonymous functions are very commonly used in 2 specific situations: <br/>
+1. As 'behaviour' inside objects (akin to member functions in other programming languages) <br/>
+2. In event handlers (more on this later, although we have been using an event handler in every one of our examples so far!) <br/>
+</b></p>
+</body>
+
+
+</html>

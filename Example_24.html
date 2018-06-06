@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+
+<meta charset = "utf-8">
+<head>
+<title>Javascript Example 24</title>
+<script>
+
+
+var rectangle = {
+  length : 5.0,
+  breadth : 3.5,
+  color : 'Red'
+};
+
+
+function Rectangle(length,breadth,color) {
+  this.length = length;
+  this.breadth = breadth;
+  this.color = color; 
+}
+
+function objectStuff() {
+  var rectangle2 = new Rectangle(3.3, 2.5,"Blue");
+  console.log("our rectangle has length = " + rectangle2.length);
+  console.log("our rectangle has breadth = " + rectangle2.breadth);
+  console.log("our rectangle has area = " + rectangle2.color);
+
+  console.log("our rectangle has length = " + rectangle.length);
+  console.log("our rectangle has breadth = " + rectangle.breadth);
+  console.log("our rectangle has area = " + rectangle.color);
+
+  console.log(typeof "123");
+  console.log(typeof 123);
+  console.log(typeof undefined);
+  console.log(typeof []);
+  console.log(typeof true);
+
+  console.log(typeof rectangle2);
+  console.log(typeof rectangle);
+
+  
+
+}
+
+window.onload = objectStuff;
+</script>
+</head>
+
+<body>
+<h1>The typeof operator</h1>
+<p> <b>This is an in-built Javascript operator that gives interesting information about the type of a variable </b></p>
+</body>
+
+
+</html>

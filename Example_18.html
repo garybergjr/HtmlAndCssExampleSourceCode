@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+
+<meta charset = "utf-8">
+<head>
+<title>Javascript Example 18</title>
+<script>
+
+
+function Rectangle(length,breadth,color) {
+  this.length = length;
+  this.breadth = breadth;
+  this.color = color; 
+}
+
+function objectStuff() {
+  var rectangle = new Rectangle(3.3, 2.5,"Blue");
+  //rectangle["OutlineColor"] = "Black";
+  //rectangle.OutlineColor = "Black";
+
+  console.log("our rectangle has length = " + rectangle.length);
+  console.log("our rectangle has breadth = " + rectangle.breadth);
+  console.log("our rectangle has color = " + rectangle.color);
+  console.log("our rectangle has Outline color = " + rectangle.OutlineColor);
+
+  delete rectangle.OutlineColor
+  delete rectangle["length"];
+  console.log("Trying again after deleting properties");
+
+  console.log("our rectangle has length = " + rectangle.length);
+  console.log("our rectangle has breadth = " + rectangle.breadth);
+  console.log("our rectangle has color = " + rectangle.color);
+  console.log("our rectangle has Outline color = " + rectangle.OutlineColor);
+
+
+}
+
+window.onload = objectStuff;
+</script>
+</head>
+
+<body>
+<h1>Removing properties on the fly</h1>
+<p> <b>Its also easy to remove a property from an object on the fly </b></p>
+</body>
+
+
+</html>

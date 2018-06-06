@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+
+<meta charset = "utf-8">
+<head>
+<title>Javascript Example 41</title>
+<script id = "code">
+
+
+function Rectangle(l,b) {
+  this.length = l;
+  this.breadth = b;
+}
+
+window.onload = function(){
+  var rectangle1 = new Rectangle(3,4);
+  var rectangle2 = new Rectangle(4,5);
+  var rectangle3 = new Rectangle(5,6);
+
+  var rectArray = [rectangle1,rectangle2,rectangle3];
+
+  printStuffAboutRectangleArray(rectArray);
+  //getArea(rectangle1);
+
+  function printStuffAboutRectangleArray(rectangleArray) { 
+
+    function getArea(rectangle){
+      console.log("Inside a nested function that calculates the area of a rectangle");
+      return rectangle.length * rectangle.breadth;
+    }   
+    for (var i = 0;i<rectangleArray.length;i++) {
+       var r = rectangleArray[i];
+       console.log(r.length + "," + r.breadth + "," + getArea(r));  
+    }   
+  }
+
+  printStuffAboutRectangleArray(rectArray);
+  getArea(rectangle1);
+
+ 
+};
+</script>
+</head>
+
+<body>
+<h1>Nested Functions</h1>
+<p> 
+Nested functions are actually a cool way to encapsulate little bits of code that otherwise might have gotten copy-pasted.
+</b></p>
+</body>
+
+
+</html>

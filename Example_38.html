@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+
+<meta charset = "utf-8">
+<head>
+<title>Javascript Example 38</title>
+<script id = "code">
+
+
+function functionExample() {
+  declaredFunction();
+ 
+  try { 
+    someFunction();
+  }
+  catch(error) {
+   console.log(error.message);
+  }
+
+  var someFunction = function() {
+    console.log("Inside a function literal - I exist");
+  }
+  someFunction();
+
+}
+
+
+function declaredFunction() {
+  console.log("Declared function..I exist");
+}
+
+
+
+
+
+window.onload = functionExample;
+</script>
+</head>
+
+<body>
+<h1>Function Declarations, Function Literals and Function Expressions</h1>
+<p> <b>
+'Declared' functions come into existence when the page loads, but 'function literals' come into existence only when the variable containing the function
+expression is executed.
+</b></p>
+</body>
+
+
+</html>

@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+
+<meta charset = "utf-8">
+<head>
+<title>Javascript Example 35</title>
+<script id = "code">
+
+
+function Rectangle(l,b,c) {
+  this.length = l;
+  this.breadth = b;
+  this.color = c;
+}
+
+
+function stringNumberExample(descriptionOfVariable,someVariable) {
+  var someNumber = 123;
+  var someStringThatLooksLikeANumber = "123";
+   
+  if(someNumber == someStringThatLooksLikeANumber) {
+    console.log(someNumber + " is == equal to " + someStringThatLooksLikeANumber); 
+  }
+  else {
+    console.log(someNumber + " is != equal to " + someStringThatLooksLikeANumber); 
+  }
+
+  if(someNumber === someStringThatLooksLikeANumber) {
+    console.log(someNumber + " is === equal to " + someStringThatLooksLikeANumber); 
+  }
+  else {
+    console.log(someNumber + " is !== equal to " + someStringThatLooksLikeANumber); 
+  }
+
+  var r1 = new Rectangle(3,4,"Red");
+  var r2 = new Rectangle(3,4,"Red");
+
+  if (r1 == r2) {
+    console.log("Rectangle r1 is == equal to r2");
+  } else {
+    console.log("Rectangle r1 is != equal to r2");
+  }
+
+  if (r1 !== r2) {
+    console.log("Rectangle r1 is !== equal to r2");
+  } else {
+    console.log("Rectangle r1 is === equal to r2");
+  }
+
+
+}
+
+window.onload = stringNumberExample;
+</script>
+</head>
+
+<body>
+<h1>== and ===</h1>
+<p> <b>
+== and === are interesting concepts
+</b></p>
+</body>
+
+
+</html>

@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+
+<meta charset = "utf-8">
+<head>
+<title>Javascript Example 12</title>
+<script>
+
+function arrayStuff() {
+  var allDays = ['Mon','Tue','Wed','Thu','Fri','Sat','Sun']
+  var deepCopy = allDays.slice();
+  var weekDays = allDays.slice();
+
+  printArray(allDays,"All days");
+  printArray(weekDays,"Week days");
+
+
+  for(var i=0;i<allDays.length;i++) {
+    if(IsWeekend(allDays[i])) {
+     var removedDay = weekDays.splice(i);
+     console.log("Removed element" + i + " because it was a weekend:" + allDays[i]);
+    }
+  }
+  printArray(allDays,"All days");
+  printArray(weekDays,"Week days");
+
+  //weekends = deepCopy.splice(5,7);
+  sunday = deepCopy.splice(-1);
+  //console.log(weekends);
+  console.log(deepCopy);
+  console.log(sunday);
+
+}
+
+function IsWeekend(day){
+  if (day == 'Sat' || day == 'Sun'){
+   return true;
+ }
+ return false;
+}
+
+function printArray(array,name) {
+  console.log("printing array:"+name);
+  console.log(array.length + " elements");
+  for(var i=0;i<array.length;i++) {
+     console.log(i + " : " + array[i]);
+   }
+}
+
+
+window.onload = arrayStuff;
+</script>
+</head>
+
+<body>
+<h1>Javascript example</h1>
+<p> <b>Deleting an element from an array using the .splice property </b></p>
+</body>
+
+
+</html>

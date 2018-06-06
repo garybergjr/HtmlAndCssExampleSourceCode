@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+
+<meta charset = "utf-8">
+<head>
+<title>Javascript Example 44</title>
+<script id = "code">
+
+
+function Circle(r) {
+  this.radius = r;
+}
+
+window.onload = function(){
+  var circle1 = new Circle(3);
+  var circle2 = new Circle(4);
+  var circle3 = new Circle(5);
+
+
+  var circleArray = [circle1,circle2,circle3];
+
+  var areaFunction = printStuffAboutCircleArray([],3.14159);
+  areaFunction(circle1);
+
+
+  function printStuffAboutCircleArray(circleArray,PI) { 
+
+    function getArea(circle){
+      console.log("Inside the nested function getArea, PI = " + PI);
+      return PI * circle.radius * circle.radius;
+    };   
+    for (var i = 0;i<circleArray.length;i++) {
+       var c = circleArray[i];
+       console.log(c.radius + "," + getArea(c));  
+    } 
+   return getArea;  
+  }
+ 
+
+};
+</script>
+</head>
+
+<body>
+<h1>Closures introduced</h1>
+<p> 
+A closure is a function, along with the environment in which it was 'created'
+</b></p>
+</body>
+
+
+</html>

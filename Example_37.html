@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+
+<meta charset = "utf-8">
+<head>
+<title>Javascript Example 37</title>
+<script id = "code">
+
+
+
+function StringExample() {
+
+  var firstName = "Vitthal";
+  var lastName = 'Srinivasan';
+  // concatenation
+  var fullName = firstName + " " + lastName;
+  console.log("Combine firstName " + firstName + " and lastName " + lastName + " into fullName = " + fullName); 
+  // find substring position
+  var positionOfLastName = fullName.indexOf(lastName);
+  console.log("Inside " + fullName + " the string " + lastName + " occurs at position " + positionOfLastName);
+
+  var nickName = "Humpty Dumpty";
+  var nameParts = fullName.split(" ");
+  console.log("Fullname split into words (delimited by space) " + nameParts);
+  fullName = nickName + " " + nameParts[1];
+  console.log("Reconstructed fullname = " + fullName);
+
+}
+
+
+
+window.onload = StringExample;
+</script>
+</head>
+
+<body>
+<h1>Strings</h1>
+<p> <b>
+Strings are strange because they are objects, but seem to behave like primitive types (i.e. they seem to be passed by value, not by reference) - that's because they are immutable. Strings never change, new strings are created:-);
+</b></p>
+</body>
+
+
+</html>

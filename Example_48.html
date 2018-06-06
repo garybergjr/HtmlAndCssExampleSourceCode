@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+
+<meta charset = "utf-8">
+<head>
+<title>Javascript Example 48</title>
+<script id = "code">
+
+
+
+function Bird() { 
+  this.sayHello = function() {
+    console.log("I am a bird, of type = " + this.name);
+  }
+  this.fly = function() {
+    console.log("I am flying!!");
+  }
+}
+
+function FlightlessBird() {
+ this.fly = function() {
+    console.log("I can't fly, even though I'm a bird :-(");
+  }
+}
+
+
+function Turkey(){
+  this.name = "Turkey";
+}
+
+window.onload = function(){
+  FlightlessBird.prototype = new Bird();
+  Turkey.prototype = new FlightlessBird();
+  var turkey1 = new Turkey();
+  turkey1.fly();
+  turkey1.sayHello();
+
+};
+</script>
+</head>
+
+<body>
+<h1>Prototypes and Inheritance Hierarchies</h1>
+<p> 
+It is easy to establish a hierarchy of prototypes.
+</b></p>
+</body>
+
+
+</html>

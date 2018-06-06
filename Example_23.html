@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+
+<meta charset = "utf-8">
+<head>
+<title>Javascript Example 23</title>
+<script>
+
+
+function Rectangle(length,breadth,color) {
+  console.log("value of this = " + this);
+  this.length = length;
+  this.breadth = breadth;
+  this.color = color; 
+}
+
+function objectStuff() {
+  var rectangle = new Rectangle(3.3, 2.5,"Blue");
+  console.log("our rectangle has length = " + rectangle.length);
+  console.log("our rectangle has breadth = " + rectangle.breadth);
+  console.log("our rectangle has area = " + rectangle.color);
+
+  var badRectangle = Rectangle(3.3, 2.5,"Blue");
+  console.log(badRectangle);
+  console.log("our rectangle has length = " + badRectangle.length);
+  console.log("our rectangle has breadth = " + badRectangle.breadth);
+  console.log("our rectangle has area = " + badRectangle.color);
+
+}
+
+window.onload = objectStuff;
+</script>
+</head>
+
+<body>
+<h1>Bad things happen if you use an object constructor without new</h1>
+<p> <b>The this pointer will by default be set to the browser window object, so there is nothing meaningful that the object constructor can do. </b></p>
+</body>
+
+
+</html>

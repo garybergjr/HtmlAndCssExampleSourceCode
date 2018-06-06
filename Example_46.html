@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+
+<meta charset = "utf-8">
+<head>
+<title>Javascript Example 46</title>
+<script id = "code">
+
+
+
+function Shape(shapeName) { 
+  console.log("Inside the shape object constructor");
+  this.shapeName = shapeName;
+  this.draw = function() {
+    console.log("I am a " + this.shapeName + " and I am drawing myself");
+  }
+}
+
+function Circle(r) {
+  console.log("Inside the circle object constructor");
+  this.radius = r;
+}
+
+function Rectangle(l,b){
+  console.log("Inside the rectangle object constructor");
+  this.length = l;
+  this.breadth = b;
+}
+
+
+window.onload = function(){
+  console.log("Hi");
+  Circle.prototype = new Shape("Circle");
+  Rectangle.prototype = new Shape("Rectangle");
+  console.log("Hi2");
+  var circle1 = new Circle(3);
+  var rectangle2 = new Rectangle(4);
+
+  console.log(circle1.radius);
+  console.log(rectangle2.length);
+
+  circle1.draw();
+  rectangle2.draw();
+
+ 
+
+};
+</script>
+</head>
+
+<body>
+<h1>Prototypes introduced</h1>
+<p> 
+Prototypes are Javascript's way of doing inheritance.
+</b></p>
+</body>
+
+
+</html>

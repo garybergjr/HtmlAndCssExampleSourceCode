@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+
+<meta charset = "utf-8">
+<head>
+<title>Javascript Example 7</title>
+<script>
+
+window.onload = printX;
+var x = 5;
+function printX() {
+  var x = 10;
+  var pi = 3.1415;
+  e = 2.71828;
+  console.log("Inside printX: x = " + x);
+  printAnotherX(); 
+}
+
+function printAnotherX() {
+  var x = 20;
+  console.log("Inside printAnotherX: x = " + x);
+}
+
+</script>
+</head>
+
+<body>
+<h1>Our seventh Javascript example</h1>
+<p> <b>If you have global and local variables with the same name, the local variable will always be used.</b></p>
+<p> <b>Global</b> variables exist across all functions</p>
+<p> <b>Local</b> variables exist across all functions</p>
+</body>
+
+
+</html>

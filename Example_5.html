@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+
+<meta charset = "utf-8">
+<head>
+<title>Javascript Example 5</title>
+<script>
+window.onload = printX;
+var x = 5;
+function printX() {
+  var x = 10;
+  var pi = 3.1415;
+  console.log("Inside printX: x = " + x);
+  console.log("Inside printX: pi = " + pi);
+  printAnotherX(); 
+}
+
+function printAnotherX() {
+  var x = 20;
+  console.log("Inside printAnotherX: x = " + x);
+  console.log("Inside printAnotherX: pi = " + pi);
+}
+</script>
+</head>
+
+<body>
+<h1>Our fifth Javascript example</h1>
+<p> <b>Global</b> variables exist across all functions</p>
+<p> <b>Local</b> variables exist across all functions</p>
+</body>
+
+
+</html>

@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+
+<meta charset = "utf-8">
+<head>
+<title>Javascript Example 28</title>
+<script>
+
+
+function Rectangle(length,breadth,color) {
+  this.length = length;
+  this.breadth = breadth;
+  this.color = color;
+}
+
+function Circle(radius,color) {
+  this.radius = radius;
+}
+
+
+function getAreaFunction(shape) {
+  var circleAreaFunction = function(s) {
+     return 3.14 * s.radius * s.radius;
+  }
+  var rectangleAreaFunction = function(s) {
+      return s.length * s.breadth;
+  }
+
+  if (shape instanceof Rectangle) {
+    console.log("Rectangle was passed in");
+    return rectangleAreaFunction;   
+  }
+  if (shape instanceof Circle) {
+    console.log("Circle was passed in");
+    return circleAreaFunction;
+  }
+  return undefined;
+}
+
+
+function objectStuff() {
+  var rectangle1 = new Rectangle(5, 5,"Blue");
+  var circle2 = new  Circle(10,"Red");
+  var areaFunction1 = getAreaFunction(rectangle1);
+  var areaFunction2 = getAreaFunction(circle2);
+
+
+  console.log("Area of circle is : " + areaFunction2(circle2));
+  console.log("Area of rectangle  is : " + areaFunction1(rectangle1));
+
+}
+
+window.onload = objectStuff;
+</script>
+</head>
+
+<body>
+<h1>Passing functions to functions!!</h1>
+<p> <b>Doing stuff with arrays </b></p>
+</body>
+
+
+</html>

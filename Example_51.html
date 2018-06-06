@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+
+<meta charset = "utf-8">
+<head>
+<title>Javascript Example 51</title>
+<script id = "code">
+
+
+window.onload = function(){
+
+  String.prototype.sayHello =   this.sayHello = function() {
+    console.log("I am a smart string - not just any string, but a smart string. Oh, and btw, my value is: " + this);
+  }
+
+  var someString = "Vitthal Srinivasan";
+  var someOtherString = "Humpty Dumpty";
+  someString.sayHello();
+  someOtherString.sayHello();
+ 
+
+};
+</script>
+</head>
+
+<body>
+<h1>Overriding properties of built-in objects</h1>
+<p> 
+Its really easy to override the properties of even a built-in object such as string.
+Be careful while doing so!
+</b></p>
+</body>
+
+
+</html>

@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+
+<meta charset = "utf-8">
+<head>
+<title>Javascript Example 19</title>
+<script>
+
+
+var rectangle = {
+  length : 5.0,
+  breadth : 3.5,
+  color : 'Red',
+  area : function() {
+    return this.length * this.breadth;
+  } 
+};
+
+
+function objectStuff() {
+  console.log("our rectangle has length = " + rectangle.length);
+  console.log("our rectangle has breadth = " + rectangle.breadth);
+  console.log("our rectangle has area = " + rectangle.color);
+  console.log("our rectangle has area = " + rectangle.area());
+  console.log("our rectangle has area = " + rectangle["area"]);
+
+
+}
+
+window.onload = objectStuff;
+</script>
+</head>
+
+<body>
+<h1>Properties can be functions too!!</h1>
+<p> <b>Remember that Javascript supports first class functions, so anything you can do with a string or a number, you can do with a function as well.</b></p>
+</body>
+
+
+</html>

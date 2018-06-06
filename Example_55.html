@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+
+<meta charset = "utf-8">
+<head>
+<title>Javascript Example 55</title>
+<script id = "code">
+
+var noVotes = 0;
+
+window.onload = function(){
+  
+
+  var noButton = document.getElementById("noButton");
+  var yesVotes = 0;
+
+  noButton.onclick = countNoVotes;
+  var yesButton = document.getElementById("yesButton");
+
+
+  yesButton.onclick = function() {
+    yesVotes++;
+    var yesVotesMessage = document.getElementById("yesVotes");
+    yesVotesMessage.innerHTML = "# Yes votes = <b>" + yesVotes + "</b><br/>";
+    var imageTag = document.getElementById("meme");
+    imageTag.setAttribute("src", "Example_55_yes.jpeg");
+  }
+
+}
+
+function countNoVotes() {
+  noVotes++;
+  var noVotesMessage = document.getElementById("noVotes");
+  noVotesMessage.innerHTML = "# No votes = <b>" + noVotes + "</b><br/>";
+  
+  var imageTag = document.getElementById("meme");
+  imageTag.src = "Example_55_No.jpeg";
+
+}
+
+</script>
+</head>
+
+<body>
+<h1>The DOM is very powerful!</h1>
+<p> 
+We can do a lot with the DOM. Click on the buttons below to see how the DOM can be used to manipulate the contents of the HTML of a page.
+</b></p>
+<button id = "yesButton"> Yes! </button>
+<button id = "noButton"> No! </button>
+
+<div id = "yesVotes"></div>
+<div id = "noVotes"></div>
+
+<img src = "" id = "meme"></img>
+
+
+</body>
+
+
+</html>

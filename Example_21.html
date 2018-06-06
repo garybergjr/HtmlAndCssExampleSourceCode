@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+
+<meta charset = "utf-8">
+<head>
+<title>Javascript Example 21</title>
+<script>
+
+
+function Rectangle(l,b,c) {
+  this.length = l;
+  this.breadth = b;
+  this.color = c; 
+  this.area = function() {
+    return this.length * this.breadth;
+  }
+}
+
+function objectStuff() {
+  var rectangle = new Rectangle(3.3, 2.5,"Blue");
+  console.log("our rectangle has length = " + rectangle.length);
+  console.log("our rectangle has breadth = " + rectangle.breadth);
+  console.log("our rectangle has area = " + rectangle.area());
+
+  console.log("our rectangle has length = " + rectangle["length"]);
+  console.log("our rectangle has breadth = " + rectangle["breadth"]);
+  console.log("our rectangle has area = " + rectangle["area"]);
+
+}
+
+window.onload = objectStuff;
+</script>
+</head>
+
+<body>
+<h1>Two ways to access properties</h1>
+<p> <b>The properties of an object can be accessed in 2 different ways - understand the similarities and differences.  </b></p>
+</body>
+
+
+</html>

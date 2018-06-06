@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+
+<meta charset = "utf-8">
+<head>
+<title>Javascript Example 17</title>
+<script>
+
+
+function Rectangle(length,breadth,color) {
+  this.length = length;
+  this.breadth = breadth;
+  this.color = color; 
+}
+
+function objectStuff() {
+  var rectangle = new Rectangle(3.3, 2.5,"Blue");
+  console.log("our rectangle has length = " + rectangle.length);
+  console.log("our rectangle has breadth = " + rectangle.breadth);
+  console.log("our rectangle has colora = " + rectangle.color);
+  console.log("our rectangle has outlinecolor = " + rectangle.OutlineColor);
+
+  rectangle["OutlineColor"] = "Black";
+  console.log("Trying again");
+  console.log("our rectangle has area = " + rectangle.OutlineColor);
+
+}
+
+window.onload = objectStuff;
+</script>
+</head>
+
+<body>
+<h1>Adding properties on the fly</h1>
+<p> <b>Its not hard to add a property to an object on the fly </b></p>
+</body>
+
+
+</html>

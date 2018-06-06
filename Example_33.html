@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+
+<meta charset = "utf-8">
+<head>
+<title>Javascript Example 33</title>
+<script id = "code">
+
+
+
+function NaNExample() {
+
+  testIfIsNaN(123,123);
+  testIfIsNaN("\'123\'","123");
+  testIfIsNaN("Math.sqrt(-1)",Math.sqrt(-1));
+  testIfIsNaN("\'Heloo\'","Hello");
+  testIfIsNaN("<empty string>","");
+  testIfIsNaN(undefined,undefined);
+  testIfIsNaN(null,null);
+  testIfIsNaN("0/0",0/0);
+  testIfIsNaN("The string 'NaN'",'NaN');
+  testIfIsNaN("The value NaN",NaN);
+
+}
+
+function testIfIsNaN(descriptionOfVariable,someVariable) {
+  console.log("Is " + descriptionOfVariable + " NaN? : " + isNaN(someVariable));
+  //console.log("What is the type of this variable? " + (typeof someVariable)); 
+}
+
+window.onload = NaNExample;
+</script>
+</head>
+
+<body>
+<h1>NaN</h1>
+<p> <b>
+Javascript has a bunch of 'special values'. Of these, NaN is a special value that appears when a math-related operation fails or experiences an error.
+Remember to always test for NaN using IsNaN(x), not x == NaN.
+</b></p>
+</body>
+
+
+</html>

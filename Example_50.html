@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+
+<meta charset = "utf-8">
+<head>
+<title>Javascript Example 51</title>
+<script id = "code">
+
+
+function Rectangle(l,b) {
+  this.length = l;
+  this.breadth = b;
+}
+
+function Shape() {
+  this.sayHello = function () {"I am a shape!"};
+}
+
+window.onload = function(){
+
+  var shape = new Shape();
+  Rectangle.prototype = shape;
+  var r = new Rectangle(3,4);
+  console.log(r.hasOwnProperty("length"));
+
+
+  console.log(Rectangle.constructor)
+  console.log(r.hasOwnProperty(length))
+  console.log(shape.isPrototypeOf(r));
+
+};
+</script>
+</head>
+
+<body>
+<h1>Object as the prototype of all Objects!</h1>
+<p> 
+Javascript has a special object called 'Object', that is the prototype of all objects!
+</b></p>
+</body>
+
+
+</html>

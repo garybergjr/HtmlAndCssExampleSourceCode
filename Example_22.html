@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+
+<meta charset = "utf-8">
+<head>
+<title>Javascript Example 21</title>
+<script>
+
+
+function Rectangle(l,b,c) {
+  this.length = l;
+  this.breadth = b;
+  this.color = c; 
+  this.area = function() {
+    return this.length * this.breadth;
+  }
+}
+
+function objectStuff() {
+  var rectangle = new Rectangle(3.3, 2.5,"Blue");
+
+  for (var propertyName in rectangle){
+     var propertyValue = rectangle[propertyName];
+     console.log("Property name = " + propertyName);
+     console.log("Property value = " + propertyValue);
+  }
+
+}
+
+window.onload = objectStuff;
+</script>
+</head>
+
+<body>
+<h1>Our first object!!</h1>
+<p> <b>Doing stuff with arrays </b></p>
+</body>
+
+
+</html>

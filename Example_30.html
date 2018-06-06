@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+
+<meta charset = "utf-8">
+<head>
+<title>Javascript Example 30</title>
+<script>
+
+
+function Rectangle(length,breadth,color) {
+  this.length = length;
+  this.breadth = breadth;
+  this.color = color;
+}
+
+
+
+function modifyX(rectangle, weekDays) {
+  console.log("Before modifying (inside function) - variables have values = " + rectangle.length + " and " + weekDays);
+  rectangle.length = rectangle.length * 2;
+  weekDays.push('Manic Mondays!!');
+  console.log("After modifying (inside function) - variables have values = " + rectangle.length + " and " + weekDays);
+
+}
+
+
+
+function reassignX(rectangle, weekDays) {
+  console.log("Before re-assigning (inside function) - variables have values = " + rectangle.length + " and " + weekDays);
+  rectangle = new Rectangle(7,5,"Red");
+  weekDays = ['Sat','Sun']
+  console.log("After re-assigning (inside function) - variables have values = " + rectangle.length + " and " + weekDays);
+}
+
+
+function passByObjectReferenceExample() {
+  var rectangle1 = new Rectangle(5, 5,"Blue");
+  var weekDays = ['Sun','Mon','Tue','Wed','Thu','Fri'];
+  console.log("Initial values (in calling function) : " + rectangle1.length + " and " + weekDays);
+  reassignX(rectangle1,weekDays);
+  console.log("Final values (in calling function) : " + rectangle1.length + " and " + weekDays);
+
+  console.log("Initial values (in calling function) : " + rectangle1.length + " and " + weekDays);
+  modifyX(rectangle1,weekDays);
+  console.log("Final values (in calling function) : " + rectangle1.length + " and " + weekDays);
+
+}
+
+window.onload = passByObjectReferenceExample;
+</script>
+</head>
+
+<body>
+<h1>Pass by object reference!!</h1>
+<p> <b>Unlike primitive types, objects are passed 'by reference'. So changes in a function will reflect in the calling function </b></p>
+</body>
+
+
+</html>

@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+
+<meta charset = "utf-8">
+<head>
+<title>Javascript Example 26</title>
+<script>
+
+
+function Rectangle(length,breadth,color) {
+  this.length = length;
+  this.breadth = breadth;
+  this.color = color; 
+  var privateVar = "I don't want anyone to know this, but I am actually not just a rectangle, but also a square";
+  this.sayHello = function() {
+    console.log(privateVar);
+  };
+}
+
+function objectStuff() {
+  var rectangle2 = new Rectangle(3.3, 2.5,"Blue");
+  console.log(rectangle2.privateVar);
+
+
+  console.log("our rectangle has length = " + rectangle2.length);
+  console.log("our rectangle has breadth = " + rectangle2.breadth);
+  console.log("our rectangle has area = " + rectangle2.color);
+  rectangle2.sayHello();
+
+  var num = 123;
+  console.log(typeof num)
+
+}
+
+window.onload = objectStuff;
+</script>
+</head>
+
+<body>
+<h1>Faking public and private properties in Javascript</h1>
+<p> <b>
+Javascript does not have a way to explicitly mark object properties as 'public' (accessible to all code) or 'private' (accessible only inside the object's code). But there is a way to get around this in Javascript.
+There is also a way to set up properties as 'protected' (accessible only to objects that 'inherit' from this object), but we will get to that once we talk about inheritance.
+</b></p>
+</body>
+
+
+</html>

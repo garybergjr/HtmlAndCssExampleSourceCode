@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+
+<meta charset = "utf-8">
+<head>
+<title>Javascript Example 32</title>
+<script id = "code">
+
+
+
+function nullExample() {
+  var code = document.getElementById("code");
+  if(code != null) {
+    console.log("The code in this webpage contains this html: " + code.innerHTML);
+  } 
+  else {
+    console.log("code is null!");
+  }
+  var foot = document.getElementById("foot");
+  if(foot != null) {
+    console.log("The foot of this webpage contains this html: " + foot);
+  }
+  else {
+    console.log("foot is null!");
+    console.log("Type of null is ... wait for it.. " + (typeof foot));
+  }
+
+
+  var unInitialisedVariable;
+  if(unInitialisedVariable == foot){
+    console.log("undefined == null ? " + true);
+  }
+
+
+
+
+}
+
+window.onload = nullExample;
+</script>
+</head>
+
+<body>
+<h1>'null'</h1>
+<p id = "code"> <b>
+Javascript has a bunch of 'special values'. Of these, null is a special value that is explicitly assigned (unlike undefined, which indicates the lack of any value at all)
+</b></p>
+</body>
+
+
+</html>

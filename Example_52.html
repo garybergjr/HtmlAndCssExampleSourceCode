@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+
+<meta charset = "utf-8">
+<head>
+<title>Javascript Example 52</title>
+<script id = "code">
+
+var noVotes = 0;
+
+window.onload = function(){
+  
+  var yesButton = document.getElementById("yesButton");
+  var noButton = document.getElementById("noButton");
+  var yesVotes = 0;
+
+  noButton.onclick = countNoVotes;
+
+  yesButton.onclick = function() {
+    yesVotes++;
+    var yesVotesMessage = document.getElementById("yesVotes");
+    yesVotesMessage.innerHTML = "# Yes votes = <b>" + yesVotes + "</b><br/>";
+
+  }
+
+}
+
+function countNoVotes() {
+  noVotes++;
+  var noVotesMessage = document.getElementById("noVotes");
+  noVotesMessage.innerHTML = "# No votes = <b>" + noVotes + "</b><br/>";
+}
+
+</script>
+</head>
+
+<body>
+<h1>The Document Object Model</h1>
+<h2> 
+The DOM is how javascript is able to manipulate and work with the HTML in a webpage. Its pretty awesome. 
+</h2>
+<h3>
+Agree?
+</h3>
+<button id = "yesButton"> Yes! </button>
+<button id = "noButton"> No! </button>
+
+<div id = "yesVotes"></div>
+<div id = "noVotes"></div>
+
+
+</body>
+
+
+</html>
