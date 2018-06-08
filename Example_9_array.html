@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+
+<meta charset = "utf-8">
+<head>
+<title>Javascript Example 9</title>
+<script>
+
+function arrayStuff() {
+  var allDays = ['Mon','Tue','Wed','Thu','Fri','Sat','Sun']
+
+  printArray(allDays,"All days");
+}
+
+function printArray(array,name) {
+  console.log("printing array:"+name);
+  console.log(array.length + " elements");
+  for(var i=0;i<array.length;i++) {
+     console.log(i + " : " + array[i]);
+   }
+}
+
+
+window.onload = arrayStuff;
+</script>
+</head>
+
+<body>
+<h1>Javascript example</h1>
+<p> <b>Doing stuff with arrays </b></p>
+</body>
+
+
+</html>
